@@ -47,10 +47,96 @@
 
         </style>
     </head>
+
     <body>
+        <input type="button" value="night" onclick="nightDayHandler(this);">
+        <script>
+            var Body = {
+                setColor: function (color) {
+                    document.querySelector('body').style.color = color;
+                },
+                setBackgroundColor: function (color) {
+                    document.querySelector('body').style.backgroundColor = color;
+                }
+            }
+
+            var Links = {
+                setColor: function (color) {
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while (i < alist.length) {
+                        alist[i].style.color = color;
+                        i = i + 1;
+                    }
+                }
+            }
+
+            function nightDayHandler(self) {
+                var target = document.querySelector('body');
+                if (self.value === 'night') {
+                    //target.style.backgroundColor = 'black';
+                    // target.style.color = 'white';
+                    self.value = 'day'
+
+                    // var alist = document.querySelectorAll('a');
+                    // var i = 0;
+                    // while ( i < alist.length) {
+                    //     alist[i].style.color = 'blue';
+                    //     console.log(alist[i]);
+                    //     i = i + 1;
+                    // } 
+
+                    //중복되는 라인을 함수로 정의하면서 코드를 간소화함
+                    
+                    Body.setBackgroundColor('black');
+                    Body.setColor('white');
+                    Links.setColor('powderblue');
+
+                } else {
+                    // target.style.backgroundColor = 'white';
+                    // target.style.color = 'black';
+                    self.value = 'night'
+
+                    // var alist = document.querySelectorAll('a');
+                    // var i = 0;
+                    // while ( i < alist.length) {
+                    //     alist[i].style.color = 'blue';
+                    //     console.log(alist[i]);
+                    //     i = i + 1;
+                    // }
+
+                    Body.setBackgroundColor('white');
+                    Body.setColor('black');
+                    Links.setColor('blue');
+
+                }
+            }
+
+            // function linkedSetColor(color) {
+            //     var alist = document.querySelectorAll('a');
+            //     var i = 0;
+            //     while (i < alist.length) {
+            //         alist[i].style.color = color;
+            //         console.log(alist[i]);
+            //         i = i + 1;
+            //         }
+            // }
+
+            // function bodySetColor(color){
+            //     document.querySelector('body').style.color=color;
+            // }
+
+            // function bodySetBackground(color){
+            //     document.querySelector('body').style.backgroundColor=color;
+            // }
+            //중복되는 라인을 함수로 정의하면서 코드를 간소화함
+
+        </script>
+
         <h1>
             <a href="index.html">WEB _ 이경훈</a>
         </h1>
+
         <div id="grid">
             <ol>
                 <li>
@@ -63,6 +149,7 @@
                     <a href="3.html">JavaScript</a>
                 </li>
             </ol>
+            
             <div id="article">
                 <h2>CSS란 무엇인가?</h2>
                 <p style="margin-top: 40px;">
