@@ -8,8 +8,9 @@
         <script
             async="async"
             src="https://www.googletagmanager.com/gtag/js?       id=G-TTHNWDQG5J"></script>
-
-        <script>
+            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);
@@ -17,119 +18,22 @@
             gtag('js', new Date());
 
             gtag('config', 'G-TTHNWDQG5J');
-        </script>
-
-        <style>
-            h1 {
-                font-size: 45px;
-                text-align: center;
-                border-bottom: 1px solid gray;
-                margin: 0;
-            }
-
-            ol {
-                border-right: 1px solid gray;
-                width: 100px;
-                margin: 0;
-                padding: 20px;
-            }
-        </style>
+        </script> -->
 
         <link rel="stylesheet" href="style.css">
-
+        <script defer src="color.js"></script>
     </head>
+    
     <body>
-    <input type="button" value="night" onclick="nightDayHandler(this);">
-        <script>
-            var Body = {
-                setColor: function (color) {
-                    document.querySelector('body').style.color = color;
-                },
-                setBackgroundColor: function (color) {
-                    document.querySelector('body').style.backgroundColor = color;
-                }
-            }
-
-            var Links = {
-                setColor: function (color) {
-                    var alist = document.querySelectorAll('a');
-                    var i = 0;
-                    while (i < alist.length) {
-                        alist[i].style.color = color;
-                        i = i + 1;
-                    }
-                }
-            }
-
-            function nightDayHandler(self) {
-                var target = document.querySelector('body');
-                if (self.value === 'night') {
-                    //target.style.backgroundColor = 'black';
-                    // target.style.color = 'white';
-                    self.value = 'day'
-
-                    // var alist = document.querySelectorAll('a');
-                    // var i = 0;
-                    // while ( i < alist.length) {
-                    //     alist[i].style.color = 'blue';
-                    //     console.log(alist[i]);
-                    //     i = i + 1;
-                    // } 
-
-                    //중복되는 라인을 함수로 정의하면서 코드를 간소화함
-                    
-                    Body.setBackgroundColor('black');
-                    Body.setColor('white');
-                    Links.setColor('powderblue');
-
-                } else {
-                    // target.style.backgroundColor = 'white';
-                    // target.style.color = 'black';
-                    self.value = 'night'
-
-                    // var alist = document.querySelectorAll('a');
-                    // var i = 0;
-                    // while ( i < alist.length) {
-                    //     alist[i].style.color = 'blue';
-                    //     console.log(alist[i]);
-                    //     i = i + 1;
-                    // }
-
-                    Body.setBackgroundColor('white');
-                    Body.setColor('black');
-                    Links.setColor('blue');
-
-                }
-            }
-
-            // function linkedSetColor(color) {
-            //     var alist = document.querySelectorAll('a');
-            //     var i = 0;
-            //     while (i < alist.length) {
-            //         alist[i].style.color = color;
-            //         console.log(alist[i]);
-            //         i = i + 1;
-            //         }
-            // }
-
-            // function bodySetColor(color){
-            //     document.querySelector('body').style.color=color;
-            // }
-
-            // function bodySetBackground(color){
-            //     document.querySelector('body').style.backgroundColor=color;
-            // }
-            //중복되는 라인을 함수로 정의하면서 코드를 간소화함
-
-        </script>
-        
+        <input type="button" value="night" onclick="nightDayHandler(this);">
+                
         <h1 >
             <!-- 배경색 인라인 적용 - 가장 강력함 -->
             <a href="index.html">WEB _ 이경훈</a>
         </h1>
         
         
-        <div id="grid">       
+        <div id="grid">
         <ol>
             <li>
                 <a href="1.html">HTML</a>
@@ -143,7 +47,7 @@
         </ol>
         
        
-        <!--Start of Tawk.to Script-->
+        <!-- Start of Tawk.to Script
         <script type="text/javascript">
             var Tawk_API = Tawk_API || {},
                 Tawk_LoadStart = new Date();
@@ -159,7 +63,7 @@
                     .insertBefore(s1, s0);
             })();
         </script>
-        <!--End of Tawk.to Script-->
+        End of Tawk.to Script -->
         
         <div id="article">
         <h2>WEB이란 무엇인가?</h2>
@@ -197,24 +101,6 @@
                 allowfullscreen="allowfullscreen"></iframe>
         </p>
         <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document,
-                    s = d.createElement('script');
-                s.src = 'https://web-3210.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', + new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
         </div>
         </div>
     </body>
